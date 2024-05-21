@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- <style>
+    body > div > h1 {
+      color: blue;
+    }
+  </style> -->
+
+  <style>
+    body > div > h1 {
+      color: lightcoral;
+    }
+  </style>
+  <body>
+    <div id="root">
+      <h1>구하림</h1>
+    </div>
+    <script>
+      // 내가 한 방법
+      // let root = document.getElementById("root");
+      // console.log(root);
+      // root.children[0].style.color = "blue";
+
+      // 강사님이 한 방법
+      //  리턴이 배열이라서 배열로 나옴
+      // 제어가 가능 하다.
+      let h1 = window.document.getElementsByTagName("h1");
+      console.log(h1);
+      // h1[0].style.color = "blue";
+      console.log(h1[0].style.color);
+    </script>
+  </body>
+</html>

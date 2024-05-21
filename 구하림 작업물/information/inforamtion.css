@@ -1,0 +1,38 @@
+ /* 배경 */
+ 
+.wrap{
+   position: relative;
+}
+.content{
+  position: absolute;
+  left: 195px;
+  top: 169px;
+  z-index: 5;
+  width: 480px;
+  height: 795px;
+  background-color: antiquewhite;
+  font-size: 15px;
+
+}
+h4 {
+   margin-left: 15px;
+}
+/* 필요한 정보 VS 불필요한 정보 */
+.information{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* 두가지를 굳이 구분하는 이유? */
+.division > h3 {
+   margin-left: 90px;
+}
+
+
+/* 뇌는 왜 불필요한 정보라고 정의 될만한 것들을 걸러내지 못하는 이유? */
+.unfiltered > h3 {
+margin-left: 90px;
+}
+
+

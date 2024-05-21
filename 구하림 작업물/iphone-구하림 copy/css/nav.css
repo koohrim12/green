@@ -1,0 +1,64 @@
+/* background- set */
+:root {
+  --bg-black: black;
+  --color-black: black;
+  --bg-button-black: black;
+  --bg-gray: #4d4d4d;
+  --bg-nav: #e6e6e6;
+  --bg-white: white;
+  --bg-button-blue: cornflowerblue;
+  --color-black: black;
+  --color-white: white;
+  --imge: pink;
+}
+/* nav 공통  */
+.nav-bg-black {
+  background-color: var(--bg-black);
+}
+.nav-bg-white {
+  background-color: var(--color-white);
+}
+/* color */
+.nav-color-white {
+  color: var(--color-white);
+}
+.nav-color-black {
+  color: var(--color-black);
+}
+
+nav > div:nth-child(1) {
+  width: 100vw;
+  height: 10vh;
+  border: 2px solid black;
+  background-color: var(--bg-nav);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > div:first-child > p {
+  font-size: 15px;
+  margin-right: 50px;
+}
+nav > div:first-child > input {
+  border: 2px solid black;
+  width: 200px;
+  height: 40px;
+}
+nav > div:first-child > div:last-child {
+  background-color: var(--bg-button-black);
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  margin-left: 20px;
+  color: white;
+  text-align: center;
+}
+
+nav > div:last-child > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}

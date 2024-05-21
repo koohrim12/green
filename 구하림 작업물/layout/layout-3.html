@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout- 3</title>
+    <style>
+      #centainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #centainer > .frist {
+        width: 50px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .frist > div:nth-child(1) {
+        border: 1px solid black;
+        width: 50px;
+        height: 100px;
+      }
+      #centainer > .frist > div:nth-child(2) {
+        border: 1px solid black;
+        width: 50px;
+        height: 100px;
+      }
+
+      #centainer > .secend {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .secend > div:nth-child(1) {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .secend > div:nth-child(2) {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      #centainer > .secend > div:nth-child(2) > div:nth-child(1) {
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      #centainer > .secend > div:nth-child(2) > div:nth-child(2) {
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .secend > div:nth-child(2) > div:nth-child(3) {
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      #centainer > .secend > div:nth-child(2) > div:nth-child(4) {
+        border: 1px solid black;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      #centainer > .secend > div:nth-child(3) {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .secend > div:nth-child(4) {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .th {
+        width: 100px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      #centainer > .th > div:nth-child(1) {
+        border: 1px solid black;
+        width: 100px;
+        height: 200px;
+      }
+      #centainer > .th > div:nth-child(2) {
+        border: 1px solid black;
+        width: 100px;
+        height: 200px;
+      }
+      #centainer > .th > div:nth-child(2) > div:nth-child(1) {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #centainer > .th > div:nth-child(2) > div:nth-child(2) {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+      #centainer > .th > div:nth-child(3) {
+        border: 1px solid black;
+        width: 100px;
+        height: 200px;
+      }
+      #centainer > .th > div:nth-child(4) {
+        border: 1px solid black;
+        width: 100px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="centainer">
+      <div class="frist">
+        <div>1</div>
+        <div>2</div>
+      </div>
+      <div class="secend">
+        <div>1</div>
+        <div>
+          <div>1</div>
+          <div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+          <div>4</div>
+        </div>
+      </div>
+      <div class="th">
+        <div>1</div>
+        <div>2</div>
+        <div>
+          <div>1</div>
+          <div>2</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

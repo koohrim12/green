@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=#, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1 onclick=" trueChange()">구하림</h1>
+      <h1 onclick=" love()">구교환</h1>
+    </div>
+  </body>
+  <script>
+    let root = document.getElementById("root");
+    console.log(root.children[0]);
+    root.children[0].innerHTML = "구닭";
+    root.children[1].innerHTML = "바다 남편 ";
+
+    function trueChange() {
+      let root = document.getElementById("root");
+      console.log(root.children[0]);
+      root.style.color = "red";
+      root.style.backgroundColor = "pink";
+    }
+
+    // 바다남편
+    function love() {
+      let root = document.getElementById("root");
+      console.log(root.children[1]);
+      root.style.color = "";
+      root.style.backgroundColor = "green";
+    }
+  </script>
+</html>

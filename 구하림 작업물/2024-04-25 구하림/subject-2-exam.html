@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subejct-2</title>
+  </head>
+  <body>
+    <main id="root">
+      <div>구하림</div>
+      <div>김보미</div>
+      <div>김수현</div>
+      <div>김정수</div>
+      <div>문혜림</div>
+      <div>배성빈</div>
+      <div>백지원</div>
+      <div>송이현</div>
+      <div>신지윤</div>
+      <div>유으뜸</div>
+      <div>유호영</div>
+      <div>이연승</div>
+      <div>이재영</div>
+      <div>이종수</div>
+      <div>임유진</div>
+      <div>정호연</div>
+      <div>조우식</div>
+      <div>조자연</div>
+      <div>최유진</div>
+      <div>황재민</div>
+    <main>
+  </body>
+  <script>
+    // 가장 큰 부모 root 선언 했다.
+    let root = document.getElementById("root");
+    console.log(root);
+    root.style.display = "grid";
+    root.style.gridTemplateColumns = "repeat(5, 1fr)";
+    root.style.gridTemplateRows = "repeat(4, 1fr)";
+    root.style.gap = "1vw";
+    root.style.width = "100vw";
+    root.style.minHeight = "100vh";
+    root.style.height = "auto";
+    root.style.margin = "2vw auto";
+    root.style.gridAutoRows = "minmax(150px, auto)";
+
+    // root 의 자식 div 를  선언 했다.
+    let names = document.getElementsByTagName("div");
+    console.dir(names);
+    console.log(names);
+    for (let i = 0; i < names.length; i++) {
+      names[i].style.display = "flex";
+      names[i].style.alignItems = "center";
+      names[i].style.justifyContent = "center";
+      names[i].style.fontSize = "1rem";
+      names[i].style.backgroundColor = "#f0f0f0";
+      names[i].style.border = "1px solid #ccc";
+      names[i].style.padding = "1vw";
+    }
+
+    //  mediaQueries 시작
+    function  MediaMax (Miq){
+      if(Miq.matches){
+        let rootStyle = {
+          gridTemplateColumns: 'repeat(1, 1fr)',
+          gridAutoRows: '120px',
+        };
+
+        let childrenStyle= {
+          minHeight: '120px'
+        };
+        applyStyles(rootStyle, childrenStyle);
+      }
+
+      else {
+        let rootStyle = {
+          gridTemplateColumns: 'repeat(5, 1fr)',
+          gridAutoRows: 'minmax(150px, auto)',
+        };
+        let childrenStyle= {
+          minHeight: '150px'
+        };
+        applyStyles(rootStyle, childrenStyle);
+      };
+    }
+
+    function applyStyles(rootStyle,childrenStyle) {
+      let root = document.getElementById('root');
+      Object.assign(root.style, rootStyle);
+      
+      let children = root.children;
+      for (let j =0; j<children.length; j++) {
+        Object.assign(children[j].style, childrenStyle);
+      }
+    };
+
+    let Miq = window.matchMedia('(max-width:600px)');
+    MediaMax(Miq);
+
+    Miq.addEventListener(MediaMax);
+
+    
+
+
+    
+
+  
+   
+
+
+   
+
+
+  </script>
+</html>

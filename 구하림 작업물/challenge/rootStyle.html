@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 각각 두개의 변수 선언
+      let rootStyle = {
+        display: "grid",
+        gridTemplateColumns: "repeat(5, 1fr)",
+        gridTemplateRows: "repeat(4, 1fr)",
+        gap: "1vw",
+        width: "100vw",
+        minHeight: "100vh",
+        height: "auto",
+        margin: "2vw auto",
+        gridAutoRows: "minmax(150px, auto)",
+      };
+
+      let childrenStyle = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "1rem",
+        backgroundColor: "#f0f0f0",
+        border: "1px solid #ccc",
+        padding: "1vw",
+      };
+      //  Object.assign 매소드 시점으로 변수rootSty 을  root 에게 style 을 입히겠다고 선언
+      let root = document.getElementById("root");
+      Object.assign(root.style, rootStyle);
+      // root 의 자식을 선언
+      let children = root.children;
+
+      for (names = 0; names < root.children.length; names++) {
+        Object.assign(children[names].style, childrenStyle);
+      }
+    </script>
+  </body>
+</html>

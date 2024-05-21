@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="white"><img src="img/sofa-black.png" alt="white배경" /></div>
+      <div id="black"><img src="img/sofa-color.png" alt="black 배경 " /></div>
+    </div>
+  </body>
+  <script>
+    let root = document.getElementById("root");
+    let white = document.getElementById("white");
+    let black = document.getElementById("black");
+    console.log(root, white, black);
+
+    root.style.boxSizing = " border-box";
+
+    // black.style.display = "none";
+
+    white.style.display = "flex";
+    white.style.justifyContent = "center";
+    white.style.alignItems = "center";
+    white.style.width = "100vw";
+    white.style.height = "100vh";
+
+    black.style.display = "flex";
+    black.style.justifyContent = "center";
+    black.style.alignItems = "center";
+    black.style.width = "100vw";
+    black.style.height = "100vh";
+    black.style.backgroundColor = "black";
+
+    function whiteControl() {
+      white.style.display = "none";
+    }
+    white.addEventListener("click", whiteControl);
+
+    function blackControl() {
+      white.style.display = "flex";
+      white.style.justifyContent = "center";
+      white.style.alignItems = "center";
+      white.style.width = "100vw";
+      white.style.height = "100vh";
+    }
+
+    black.addEventListener("click", blackControl);
+  </script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // addItem 이라는 함수 안에 array, item, index 라는 매개변수 를 넣는다.
+    function addItem(array, item, index) {
+      let newArray = [];
+      // Point라는 변수에 currentIndex라는 매개변수를 넣는다.
+      function Point(currentIndex) {
+        return currentIndex > index;
+      }
+      // 0부터 array 가 크거나 같을 때 length의 길이만큼 반복한다.
+      for (let i = 0; i <= array.length; i++) {
+        // 만약에 i와 index 둘다 값이 true 면
+        if (i === index) {
+          // newArray[i]에 item을 담아줘
+          newArray[i] = item;
+          // 만약에 아니라면  Point(i)와 값이 true 라면
+        } else if (Point(i) === true) {
+          // newArray[i]에 array[i - 1] 를 대입해줘
+          newArray[i] = array[i - 1];
+          // 만약 아니면 newArray[i] 에 array[i] 대입해줘
+        } else {
+          newArray[i] = array[i];
+        }
+      }
+      // if문의 조건이 충족하면 함수의 실행을 중단하고 함수 자체에서 빠져나와
+      // retun 명령문은 함수 실행을 종료하고 주어진 값을 한수 호출지점으로 변환한다.
+      return newArray;
+    }
+    // 배열 데이터
+    let harim = ["구하림", "여자", "파란색"];
+    // 변수 UpdateHarim 에 addItem (harim 이라는 배열 안에 "안경"이라는 문자열을 2번에 넣어줘) 를 대입해줘
+    let UpdateHarim = addItem(harim, "안경", 2);
+    // 여기 까지만 봐도 return 이 되는구나 하고 생가가 해야됨
+    // 함수를 호출하는데 ,얘를 변수에 담네? 그럼 여기는 값인가 ?
+    for (let i = 0; i < UpdateHarim.length; i++) {
+      // length 값 쓴거는 값이 숫자 또는 문자이다.
+      console.log(UpdateHarim[i]);
+    }
+  </script>
+</html>

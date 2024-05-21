@@ -1,0 +1,14 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "이것은 연습 파일 입니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "구하림",
+  "license": "ISC",
+  "dependencies": {
+    "pokemon": "^3.1.0"
+  }
+}

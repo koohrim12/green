@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <input
+      id="shopping-input"
+      type="text"
+      placeholder="쇼핑 목록을 입력하세요"
+    />
+    <select id="shopping-select" title="Order Select"></select>
+    <button id="add-button">쇼핑 목록 추가하기</button>
+    <button id="delete-button">쇼핑 목록 삭제하기</button>
+  </body>
+  <script>
+    let root = document.getElementById("root");
+    let addButton = document.getElementById("add-button");
+
+    let deletebutton = document.getElementById("delete-button");
+    let shoppingInput = document.getElementById("shopping-input");
+    let shoppingSelect = document.getElementById("shopping-select");
+
+    let shoppingList = [];
+    // console.log(root, shoppingInput, shoppingSelect, addButton, deletebutton);
+
+    root.style.backgroundColor = "#1d4d9f";
+    root.style.width = "500px";
+    root.style.height = "600px";
+
+    function updateSelectOptions() {
+      let last = shoppingList.length;
+      shoppingSelect.innerHTML = "";
+      for (let i = 0; i < last; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = `항목 ${i + 1}`;
+
+        shoppingSelect.appendChild(option);
+      }
+      let lastOption = document.createElement("option");
+
+      lastOption.value = "마지막";
+
+      lastOption.text = "마지막";
+
+      shoppingSelect.appendChild(lastOption); // Adding 'Last' option a
+    }
+
+    function updateView() {
+      root.innerHTML = "";
+      for (i = 0; i < shoppingList.length; i++) {
+        let itemElement = document.createElement("p");
+        itemElement.textContent = `${todoItems[i]}`;
+        root.appendChild(itemElement);
+      }
+      updateSelectOptions();
+    }
+    function getInputValue() {
+      return shoppingInput.value.trim();
+    }
+    function getOrder() {
+      let orderValue = shoppingSelect.value;
+
+      if (orderValue === "마지막") {
+        return todoItems.length - 1;
+      } else {
+        return parseInt(orderValue);
+      }
+    }
+    function addItem() {
+      let newItem = getInputValue();
+
+      let order = getOrder();
+
+      if (newItem !== "") {
+        if (order === shoppingList.length - 1) {
+          shoppingList.push(newItem); // Add at the end
+        } else {
+          shoppingList.splice(order, 0, newItem);
+        }
+        updateView();
+
+        shoppingInput.value = ""; // Clear input after adding (추가 후 입력 지우기)
+      } else {
+        console.error("할 일을 입력해야 합니다.");
+      }
+    }
+    function removeItem() {
+      let order = getOrder();
+
+      if (order >= 0 && order < shoppingList.length) {
+        // todoItems에 order의  1 째를 삭제한다.
+        shoppingList.splice(order, 1);
+
+        updateView();
+      } else {
+        console.error("유효하지 않은 순서입니다.");
+      }
+    }
+
+    addButton.addEventListener("click", addItem);
+    deleteButton.addEventListener("click", removeItem);
+    updateSelectOptions();
+  </script>
+</html>

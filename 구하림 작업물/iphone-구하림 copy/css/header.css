@@ -1,0 +1,67 @@
+:root {
+  --bg-black: black;
+  --color-black: black;
+  --bg-button-black: black;
+  --bg-gray: #4d4d4d;
+  --bg-nav: #e6e6e6;
+  --bg-white: white;
+  --bg-button-blue: cornflowerblue;
+  --color-blue: cornflowerblue;
+  --color-black: black;
+  --color-white: white;
+  --imge: pink;
+}
+.header-color-white {
+  color: var(--color-white);
+}
+
+/* header  시작*/
+
+/* header {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+} */
+
+/* iPhone 11 이상의 모델을 보상 판매하면 iPhone 15 Pro 구입 시 사용할 수
+있는 ₩220,000–₩990,000 상당의 크레딧이.* 구입하기 */
+
+header > div:first-child {
+  background-color: var(--bg-gray);
+  width: 1920px;
+  height: 120px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+header > div:last-child {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header > div:last-child > div:nth-child(1) {
+  background-color: var(--imge);
+  width: 600px;
+  height: 300px;
+}
+
+/* <button>구입하기</button> */
+header > div:last-child > div:nth-child(2) > button {
+  background-color: var(--color-blue);
+  border-radius: 30px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ₩1,550,000부터 */
+header > div:last-child > div:nth-child(2) > p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+/* header  끝*/

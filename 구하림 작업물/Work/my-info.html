@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // myinfo = 객체
+      // name =
+      var myInfo = {
+        name: "구인수",
+        1: "사장님",
+      };
+      window.console.log(myInfo);
+
+      var myInfo = {};
+      myInfo.name = "아빠";
+      window.console.log(myInfo);
+      window.console.log(myInfo.name);
+      // 2번쨰 작성법
+      //  대괄호 표기접
+      window.console.log(myInfo["name"]);
+
+      // 숫자는 .dot 표기법으로 하면 에러가 생김
+      // window.console.log(myInfo.1);
+      window.console.log(myInfo[1]);
+    </script>
+  </body>
+</html>

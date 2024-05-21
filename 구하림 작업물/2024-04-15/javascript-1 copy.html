@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT-1</title>
+  </head>
+
+  <body>
+    <!-- root 는 body 태그 대신 편집 할 부모요소 -->
+    <div id root>
+      <h1>구하림</h1>
+    </div>
+
+    <script>
+      var h1 = document.getElementsByTagName("h1")[0];
+      h1.innerText = "공미남";
+      h1.style.color = "pink";
+      h1.style.backgroundColor = "black";
+
+      window.console.log(document.getElementsByTagName("h1")[0].innerText);
+      document.getElementsByTagName("h1")[0].innerText = "공미남";
+      document.getElementsByTagName("h1")[0].style.color = "pink";
+      document.getElementsByTagName("h1")[0].style.backgroundColor = "black";
+    </script>
+  </body>
+</html>

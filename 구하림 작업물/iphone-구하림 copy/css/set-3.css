@@ -1,0 +1,134 @@
+/* Best-friends-list 시작 */
+.Best-friends-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
+}
+.Best-friends-list > div:nth-child(1) {
+  color: #e6e6e6;
+  font-weight: 700;
+  font-size: 30px;
+  margin-right: 30%;
+}
+.Best-friends-list > div:nth-child(2) {
+  background-color: var(--poto);
+  width: 30vw;
+  height: 40vh;
+}
+/* Best-friends-list 끝 */
+
+/* shopping 시작 */
+.shopping {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
+}
+.shopping > div > div:nth-child(1) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  color: #e6e6e6;
+  margin-left: 15%;
+}
+.shopping > div > div:nth-child(1) > div:nth-child(1) {
+  font-weight: 700;
+  font-size: 20px;
+}
+.shopping > div > div:nth-child(1) > div:nth-child(2) {
+  font-weight: 700;
+  font-size: 20px;
+}
+.shopping > div > div:nth-child(2) {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2%;
+  margin-left: 20%;
+}
+.shopping > div > div:nth-child(2) > div:nth-child(1) {
+  background-color: var(--poto);
+  width: 15vw;
+  height: 20vh;
+  border-radius: 30px;
+}
+.shopping > div > div:nth-child(2) > div:nth-child(2) {
+  background-color: var(--poto);
+  width: 15vw;
+  height: 20vh;
+  border-radius: 30px;
+}
+.shopping > div > div:nth-child(2) > div:nth-child(3) {
+  background-color: var(--poto);
+  width: 15vw;
+  height: 20vh;
+  border-radius: 30px;
+}
+.shopping > div > div:nth-child(2) > div:nth-child(4) {
+  background-color: var(--poto);
+  width: 15vw;
+  height: 20vh;
+  border-radius: 30px;
+}
+/* shopping 끝 */
+
+/* other-models 시작 */
+.other-models {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.other-models > div:nth-child(1) {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10%;
+}
+.other-models > div:nth-child(1) > div:nth-child(1) {
+  color: #e6e6e6;
+  font-weight: 700;
+  font-size: 20px;
+}
+.other-models > div:nth-child(1) > div:nth-child(2) {
+  color: #e6e6e6;
+  font-weight: 700;
+  font-size: 10px;
+}
+.other-models > div:nth-child(2) {
+  background-color: var(--poto);
+  width: 30vw;
+  height: 70vh;
+  border-radius: 10px;
+}
+.other-models > div:nth-child(3) {
+  background-color: var(--button);
+  border-radius: 40px;
+  width: 10vw;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.other-models > div:nth-child(3) > div {
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 1vw;
+  height: 2vh;
+  margin-left: 50%;
+}
+
+/* other-models 끝*/

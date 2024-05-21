@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="red">red</div>
+      <div id="orange">orange</div>
+      <div id="green">green</div>
+      <div id="blue">blue</div>
+    </div>
+  </body>
+  <script>
+    let root = document.getElementById("root");
+    let red = document.getElementById("red");
+    let orange = document.getElementById("orange");
+    let green = document.getElementById("green");
+    let blue = document.getElementById("blue");
+    console.log(root, red, orange, green, blue);
+
+    // let root = document.querySelector("#root");
+    // console.log(root);
+
+    // querySelectorAll  과 반복문 사용해봤음
+    // let chlid = document.querySelectorAll("#root  div");
+    // console.log(chlid);
+
+    // for (let i = 0; i < chlid.length; i++) {
+    //   chlid[i].style.border = "1px solid";
+    // }
+
+    red.style.border = "1px solid ";
+    red.style.width = "300px ";
+    red.style.height = "300px ";
+
+    orange.style.width = "300px ";
+    orange.style.height = "300px ";
+    orange.style.border = "1px solid ";
+
+    green.style.width = "300px ";
+    green.style.height = "300px ";
+    green.style.border = "1px solid ";
+
+    blue.style.width = "300px ";
+    blue.style.height = "300px ";
+    blue.style.border = "1px solid ";
+
+    root.style.display = "flex";
+    root.style.gap = "10px";
+
+    function redIight() {
+      red.style.backgroundColor = "red";
+    }
+    red.addEventListener("click", redIight);
+
+    function orangeIight() {
+      orange.style.backgroundColor = "orange";
+    }
+    orange.addEventListener("click", orangeIight);
+
+    function greenIight() {
+      green.style.backgroundColor = "green";
+    }
+    green.addEventListener("click", greenIight);
+
+    function blueIight() {
+      blue.style.backgroundColor = "blue";
+    }
+    blue.addEventListener("click", blueIight);
+  </script>
+</html>

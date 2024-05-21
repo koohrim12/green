@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --harim: red;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body > div {
+      background-color: var(--harim);
+    }
+    body > div > div {
+      width: 100vw;
+      height: 100vh;
+    }
+    /* background set */
+    body > div > div:nth-child(1) {
+      background-color: var(--harim);
+    }
+    body > div > div:nth-child(2) {
+      background-color: var(--harim);
+    }
+    body > div > div:nth-child(3) {
+      background-color: var(--harim);
+    }
+    body > div > div:nth-child(2) {
+      width: 50vw;
+      /* 나누어 진게 아니라 겹쳐진 것 EX )  */
+    }
+  </style>
+  <body>
+    <div id="root">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <!-- div 여러개 있을 듯 -->
+    </div>
+  </body>
+</html>

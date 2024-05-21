@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    let root = document.getElementById("root");
+    // console.log(root);
+    let div = document.createElement("div");
+    root.appendChild(div);
+    // console.log(div);
+    let img = document.createElement("img");
+
+    img.src = "sofa-black.png";
+    // console.log(img.src);
+    div.appendChild(img);
+
+    for (let i = 0; i < div; i++) {
+      console.log(div);
+    }
+  </script>
+</html>

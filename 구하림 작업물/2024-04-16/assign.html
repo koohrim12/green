@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 변수 a 에 값 1 이 대입 되었다. -->
+    <!--  a 라는 자리에 1이 들어왔다. -->
+    <!-- 변수 (공간) 가 선언 이 RAM 메모리 어느 부분에 공간이 만들어 져야 한다. -->
+    <script>
+      var a;
+      //  선언했다
+      a = 1;
+      // 할당했다.
+      window.console.log(a);
+      a = "구하림";
+      window.console.log(a);
+      // 재 할당
+      //  값이 무엇을 이야기 하는 지  반드시 다시 확인  해야됨
+
+      // 눈을 믿을 수가 없다.
+      a = {
+        age: 24,
+        name: "구하림",
+        year: 2001,
+      };
+      window.console.log(a);
+      //  재 할당
+      var coffee;
+      coffee = " 에소프레소";
+      coffee = {
+        name: "휘핑크림,콜라, 위스키",
+      };
+      window.console.log(coffee);
+    </script>
+  </body>
+</html>
+\

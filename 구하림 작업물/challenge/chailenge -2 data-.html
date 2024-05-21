@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>programming</title>
+    <link rel="stylesheet" href="chukenge-2-datatypes.css" />
+  </head>
+
+  <body>
+    <div id="contianer">
+      <h1>JAVA SCRIPT</h1>
+      <h2>데이터 타입</h2>
+
+      <div class="main-bg-lemon">
+        <div>
+          <h3>문자열(string)</h3>
+          <p>
+            String 타입은 큰따옴표 "" 로 감싸진 문자열을 의미한다. String 타입의
+            변수는 String 변수명; 으로 선언할 수 있다.
+          </p>
+          <h3>[String 메서드]</h3>
+          <h3>charAt() 메서드</h3>
+          <p>
+            문자열의 특정 인덱스에 해당하는 문자를 반환한다. 만약 해당 문자열의
+            길이보다 큰 인덱스나 음수를 전달하면 오류가 발생한다.
+          </p>
+
+          <h3>compareTo() 메서드</h3>
+
+          <p>
+            문자열을 인수로 전달된 문자열과 사전 편찬 순으로 비교한다. 이
+            메서드는 문자열을 비교할 때 대소문자를 구분하여 비교한다.
+            <br />
+            두 문자열이 같다면 0을 반환하며, 해당 문자열이 인수로 전달된
+            문자열보다 작으면 음수를, 크면 양수를 반환한다.
+            <br />
+            문자열을 비교할 때 대소문자를 구분하지 않기를 원한다면,
+            compareToIgnoreCase() 메서드를 사용하면 된다.
+          </p>
+          <h3>concat() 메서드</h3>
+          <p>
+            문자열의 뒤에 인수로 전달된 문자열을 추가한 새로운 문자열을
+            반환한다. concat은 concatenate의 약자로, 사전적으로 연결한다는
+            의미를 가집니다. 만약 인수로 전달된 문자열의 길이가 0이면, 해당
+            문자열을 그대로 반환한다.
+          </p>
+          <h3>indexOf() 메서드</h3>
+          <p>
+            문자열에서 특정 문자나 문자열이 처음으로 등장하는 위치의 인덱스를
+            반환한다. 만약 해당 문자열에 전달된 문자나 문자열이 포함되어 있지
+            않으면 -1을 반환한다.
+          </p>
+          <h3>trim() 메서드</h3>
+          <p>문자열의 맨 앞과 맨 뒤에 포함된 모든 공백 문자를 제거해준다.</p>
+          <h3>toLowerCase() 메서드</h3>
+          <p>
+            문자열의 모든 문자를 소문자로 변환시켜준다.
+            <br />
+            또한, toUpperCase() 메서드는 해당 문자열의 모든 문자를 대문자로
+            변환시켜 준다.
+          </p>
+        </div>
+
+        <div>
+          <h3>문자(character)</h3>
+
+          <p>character는 대소문자를 구분한다.</p>
+          <p>수치가 아닌 문자로 구분의 역할만 가능하며, 연산이 불가능하다.</p>
+          <p>
+            문자 타입은 char 형 하나만 존재하며, 문자형 리터럴을 작성할 때에는
+            반드시 큰 따옴표 ”” 가 아닌 작은 따옴표 ’’ 를 사용해야 한다.
+            <br />
+            큰 따옴표를 사용한 리터럴은 문자형 리터럴이 아니라 문자열 리터럴로
+            인식되기 때문이다.
+          </p>
+          <p>리터럴은 문자가 가리키는 값 그 자체이다.</p>
+        </div>
+
+        <div>
+          <h3>숫자열 (number)</h3>
+          <p>
+            intger (int) (정수)
+            <br />
+            소수점이 없는 숫자 (1,-1,10,-100)
+          </p>
+          <p>
+            float - 부동 소수점(실수)
+            <br />
+            실수를 표현할 때 소수점의 위치를 고정하지 않는 것.
+          </p>
+        </div>
+
+        <div>
+          <h3>Boolean</h3>
+          <p>true or false</p>
+          <p>1은 ‘참’을 의미하고 0은 ‘거짓’을 의미한다.</p>
+          <h3>비교 연산자(relational operator)</h3>
+          <ul>
+            <li>
+              < : 왼쪽의 피연산자가 오른쪽의 피연산자보다 작으면 True를
+              반환한다.
+            </li>
+            <li>
+              <= : 왼쪽의 피연산자가 오른쪽의 피연산자보다 작거나 같으면 True를
+              반환한다.
+            </li>
+            <li>
+              > : 왼쪽의 피연산자가 오른쪽의 피연산자보다 크면 True를 반환한다.
+            </li>
+            <li>
+              >= 왼쪽의 피연산자가 오른쪽의 피연산자보다 크거나 같으면 True를
+              반환한다.
+            </li>
+            <li>
+              == 왼쪽의 피연산자와 오른쪽의 피연산자가 같으면 True를 반환한다.
+            </li>
+            <li>
+              != 왼쪽의 피연산자와 오른쪽의 피연산자가 같지 않으면 True를
+              반환한다.
+            </li>
+            <li>
+              비교 연산자로 연산한 결과는 언제나 불리언 타입으로 반환되므로,
+              True나 False 중 하나의 값이 반환된다.
+            </li>
+          </ul>
+
+          <!-- 논리 연산자  -->
+          <h3>논리 연산자(logical operator)</h3>
+          <ul>
+            <li>or :논리식 중에서 하나라도 True이면 True를 반환한다.</li>
+            <li>and : 논리식이 모두 True이면 True를 반환한다.</li>
+            <li>
+              not : 논리식의 결과가 True이면 False를, False이면 True를 반환한다.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Object 객체</h3>
+          <p>
+            우리 실생활에서 객체(Object)란 사람, 자동차, 강아지처럼 실제로
+            존재하는 사물을 말한다.
+            <br />
+            각자 자신의 속성을 가지 고 있으며 , 다른것과 식별이 가능해야한다.
+            사람도 각자 자신의 이름이 있고 만약 이름이 같아도 이름 만 같은 거지
+            절대로 같은 사람이 아니기 때문에 이처럼 객체도 식별이 가능해야 한다.
+          </p>
+          <div class="object-imge">
+            <img src="chalige-2-imge/free-icon-hatchback-1048313.png" />
+            <img src="chalige-2-imge/free-icon-dog-1959964.png" />
+          </div>
+        </div>
+
+        <div>
+          <h3>function</h3>
+          <p>
+            함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된
+            독립적인 블록을 의미한다. 이러한 함수는 필요할 때마다 호출하여 해당
+            작업을 반복해서 수행할 수 있다.
+          </p>
+          <p>in-put = 입력</p>
+          <p>out-put = 출력</p>
+          <p>밀가후-> 빨 만드는 기계-> 빵</p>
+          <div class="function-imge">
+            <img src="chalige-2-imge/free-icon-wheat-flour-10367654.png" />
+            <img src="chalige-2-imge/함수 그림 .png" />
+            <img src="chalige-2-imge/free-icon-white-bread-7093198.png" />
+          </div>
+        </div>
+        <div>
+          <h3>Array(배열)</h3>
+          <p>index= 항목 순서</p>
+          <p>value = 항목 값</p>
+
+          <p>
+            점 표기법
+            <br />
+            .(dot) 을 사용하며, 점 표기법은 속도가 빠르고 읽기가 쉽다.
+          </p>
+          <p>
+            대 괄호 표기법
+
+            <br />
+            [] square bracket key 를 문자열처럼
+          </p>
+          <p>
+            key 값이 숫자인 경우
+            <br />
+            .(dot) 를 쓸 수가 없어서 , []표기법을 사용 해야만 함
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

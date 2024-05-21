@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Todo List Example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--  입력칸 (todo-input 이라는 id를 가진)에 type을 "text" 으로 지정하고 placeholder를 이용하여
+    입력칸 안에 "할 일을 입력하세요" 라는 입력 될 값의 짧은 힌트를 부여한다. -->
+    <input id="todo-input" type="text" placeholder="할 일을 입력하세요" />
+    <!-- 선택칸 (order-select 이라는 id를 가진 ) 의title를 "Order Select"로 지정한다.  -->
+    <select id="order-select" title="Order Select"></select>
+    <!--  버튼 (add-button 라는 id를 가진) 안에 항목 추가 라는 text를 넣는다. -->
+    <button id="add-button">항목 추가</button>
+    <!--  버튼 (remove-button 라는 id를 가진) 안에 항목 제거 라는 text를 넣는다. -->
+    <button id="remove-button">항목 제거</button>
+    <script>
+      let root = document.getElementById("root");
+      let addButton = document.getElementById("add-button");
+      let removeButton = document.getElementById("remove-button");
+      let todoInput = document.getElementById("todo-input");
+      let orderSelect = document.getElementById("order-select");
+      let todoItems = [];
+
+      function updateSelectOptions() {
+        // todoItems의 길이값 을 length에 대입했다.
+        let length = todoItems.length;
+        // orderSelect 안에있는 HTML 을  초기화 한다.
+        orderSelect.innerHTML = "";
+        for (let i = 0; i < length; i++) {
+          // option이라는 요소를 생성한다.
+          let option = document.createElement("option");
+          option.value = i;
+          // option의 text의 항목을 1씩 추가한다.
+          option.text = `항목 ${i + 1}`;
+          // orderSelect 의 자식으로 option을 추가한다.
+          orderSelect.appendChild(option);
+        }
+        // option 이라는 요소를 생성하고 lastOption 에 대입한다.
+        let lastOption = document.createElement("option");
+        // lastOption 의 값(value)에 "마지막"아라는 text 대입한다.
+        lastOption.value = "마지막";
+        // lastOption 의  text에  "마지막"아라는 text 대입한다.
+        lastOption.text = "마지막";
+        //  orderSelect 의  자식으로 lastOption 를 생성한다.
+        orderSelect.appendChild(lastOption); // Adding 'Last' option at the end of the list (목록 끝에 '마지막' 옵션 추가)
+      }
+
+      function updateView() {
+        // root의 안의 HTML을 초기화 한다.
+        root.innerHTML = "";
+        // i는 0부터 todoItems의 길이값이 더 클 때 까지  증가한다.
+        for (let i = 0; i < todoItems.length; i++) {
+          // p를 생성하고 itemElement 라는 변수에 대입한다.
+          let itemElement = document.createElement("p");
+          // itemElement 의 textContent에todoItems[i] 를 대입한다.
+          itemElement.textContent = `${todoItems[i]}`;
+          // root의 자식으로 itemElement을 추가한다.
+          root.appendChild(itemElement);
+        }
+        // updateSelectOptions 초기화 한다.
+        updateSelectOptions();
+      }
+
+      function getInputValue() {
+        // todoInput의 value의 양옆 공백을 줄여준다.
+        return todoInput.value.trim();
+      }
+
+      function getOrder() {
+        // orderSelect.value 을 orderValue 에 대입한다.
+        let orderValue = orderSelect.value;
+        // 만약 orderValue 와 "마지막" 이 ture 라면
+        if (orderValue === "마지막") {
+          // todoItems 의 길이값에서 -1 한 값을 반환한다.
+          return todoItems.length - 1;
+        } else {
+          // todoItems 의 길이값에서 -1 한 값을 반환 되자 않으면 orderValue 을 숫자타입으로 변환시키고 반환된다.
+
+          return parseInt(orderValue);
+        }
+      }
+
+      function addItem() {
+        // getInputValue 값을 newItem에 대입한다.
+        let newItem = getInputValue();
+        // getOrder에  order를 대입한다.
+        let order = getOrder();
+        //  !== : 불일치 연산자	왼쪽과 오른쪽 값이 서로 동일하지 않은지 테스트합니다
+        // ===	일치 연산자	왼쪽에서 오른쪽으로
+        //  만약 newItem이 초기화가 되지 않았다면
+        if (newItem !== "") {
+          // order 와 todoItems의 값 길이의 마지막에서 -1 힌 값  둘다 ture 일때
+          if (order === todoItems.length - 1) {
+            // todoItems 에 push메소드를 이용하여 newItem 을 추가한다.
+            todoItems.push(newItem); // Add at the end
+          } else {
+            // order 와 todoItems의 값의 길이의 마지막에서 -1 값이 둘다 ture 가 아니라면  splice()메소드를 이용하여 order의 0 번째에 newItem을 제거한다.
+            todoItems.splice(order, 0, newItem);
+          }
+          updateView();
+          // todoInputdml value 값을 초기와 한다
+          todoInput.value = ""; // Clear input after adding (추가 후 입력 지우기)
+        } else {
+          // todoInputdml value 값을 초기와 되지 않았다면 console 에  "할 일을 입력해야 합니다." 라는 오류 메세지를 출력한다.
+          console.error("할 일을 입력해야 합니다.");
+        }
+      }
+
+      function removeItem() {
+        let order = getOrder();
+        // && (AND 연산자)는 연산자 왼쪽과 오른쪽의 값이 모두 true이면 true, 한 쪽이라도 false이면 false 를 반환한다.
+        //  만약 0보다order이 크거나 같고, order 이todoItems.length 보다 작다면
+        if (order >= 0 && order < todoItems.length) {
+          // todoItems에 order의  1 째를 삭제한다.
+          todoItems.splice(order, 1);
+          // updateView 를 초기화 한다.
+          updateView();
+        } else {
+          // 만약 0보다order이 크거나 같고, order 이todoItems.length 보다 작다면 이 성립하지 않으면 console에 "유효하지 않은 순서입니다."라는 오류 메세지를 출력한다.
+          console.error("유효하지 않은 순서입니다.");
+        }
+      }
+      // addButton 을 click했을 때 addItem을 실행 한다.(addButton 을click 할 때 input 추가)
+      addButton.addEventListener("click", addItem);
+      // removeButton을 click 했을 때 removeItem 가 실핸된다 (removeButton을 lcick 랗 때 input제거)
+      removeButton.addEventListener("click", removeItem);
+
+      updateSelectOptions(); // Initialize select options (선택 옵션 초기화)
+    </script>
+  </body>
+</html>

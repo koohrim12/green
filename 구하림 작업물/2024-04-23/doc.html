@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div>신바다</div>
+      <div>구하림</div>
+      <div>윤양미</div>
+    </div>
+    <script>
+      let root = document.getElementById("root");
+      console.log(root);
+      root.id = "container";
+      console.dir(root.children);
+      console.dir(root.children[0]);
+      console.log(root.children[0].innerHTML);
+      // //  문혜림으로 바꾸기
+      // let moon = "문혜림";
+      // root.children[0].innerHTML = moon;
+      // //  김보미 로 바꾸기
+      // root.children[1].innerHTML = "김보미";
+      // // 구하림을 3번째 로 바꾸기
+      // root.children[2].innerHTML = "구하림";
+
+      //  배열 선언
+      let arr = ["배성빈", "신지윤", "김인티저"];
+      for (let index = 0; index < 3; index++) {
+        root.children[index].innerHTML = arr[index];
+      }
+
+      // for (let index = 0; index < arr.length; index++) {
+      //   if (arr[index] === "배성빈") {
+      //     arr[index] = "이종수";
+      //     root.children[index].innerHTML = arr[index];
+      //   }
+      // }
+
+      // 만약에 없는 이름을 입력하면 ?
+      for (let index = 0; index < arr.length; index++) {
+        if (arr[index] === "공육재") {
+          arr[index] = "이종수";
+          root.children[index].innerHTML = arr[index];
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div>구하림</div>
+      <div>김보미</div>
+      <div>김수현</div>
+      <div>김정수</div>
+      <div>문혜림</div>
+      <div>배성빈</div>
+      <div>백지원</div>
+      <div>송이현</div>
+      <div>신지윤</div>
+      <div>유으뜸</div>
+      <div>유호영</div>
+      <div>이연승</div>
+      <div>이재영</div>
+      <div>이종수</div>
+      <div>임유진</div>
+      <div>정호연</div>
+      <div>조우식</div>
+      <div>조자연</div>
+      <div>최유진</div>
+      <div>황재민</div>
+    </div>
+  </body>
+  <script>
+    const root = document.getElementById("root");
+    console.log(root);
+    // 반복문을 안써도 되니까 바로 작성
+    root.style.display = "grid";
+    root.style.gridTemplateColumns = "repeat(5, 1fr)";
+    root.style.gridTemplateRow = "repeat(4, 1fr)";
+    root.style.gap = "1vw";
+    root.style.width = "100vw";
+    root.style.minHeight = "100vh";
+    root.style.height = "auto";
+    root.style.margin = "2vw auto";
+    root.style.gridAutoRows = "minmax(150px, auto)";
+
+    const children = root.children;
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i];
+
+      child.style.display = "flex";
+      child.style.alignItems = "center";
+      child.style.justifyContent = "center";
+      child.style.fontSize = "1rem";
+      child.style.backgroundColor = "#f0f0f0";
+      child.style.border = "1px solid #ccc";
+      child.style.padding = "1vw";
+    }
+
+    // 미디어 쿼리
+
+    let Wide = window.matchMedia(
+      screen("min-width: 601px and max-width: 900px").matches
+    );
+    if (matchMedia("screen and (min-width: 601px and max-width: 900px)")) {
+      root.style.gridTemplateColumns = "repeat(3, 1fr)";
+      root.style.gridAutoRows = "minmax(150px, auto)";
+      child.style.minHeight = "150px";
+    }
+  </script>
+</html>

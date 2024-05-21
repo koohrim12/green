@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div>구</div>
+      <div>하</div>
+      <div>림</div>
+    <!-- root 안에 있는 자식에 이름을 바꿔보시오 -->
+    
+  </body>
+  <script>
+  let root = window.document.getElementById("root");
+    console.log(root)
+   console.dir(root)
+   root.children[0].innerHTML="서";
+   root.children[1].innerHTML="향"
+   root.children[2].innerHTML="희"
+
+
+  // 문제 2
+ let arr = ["운동" , "음식" , "야구", "농구", "축구", "편의점",];
+//     반복문과 조건문으로 배열 안에 있는 이름을 바꿔서 출력해보시오~
+    for (let i=0; i<arr.length; i++){
+      console.log(arr)
+      if(arr[i]==="야구"){
+      arr[i]="배구"
+    }
+  root.children[i].innerHTML=arr
+    }
+  </script>
+</html>

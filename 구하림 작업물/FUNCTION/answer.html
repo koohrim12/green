@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <h1>구하림이 둘 중에 고를 것 같은 걸 고르시오.</h1>
+        <button onclick="Snaicon();" id="Sanicon">산</button>
+        <button onclick="badaicon()" id="badaicon">바다</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let root = document.getElementById("root");
+    console.log(root);
+    root.style.backgroundColor = "pink";
+    root.style.display = "flex";
+    root.style.alignItems = "center";
+    root.style.justifyContent = "center";
+    let icon = document.getElementById("Sanicon");
+    console.log(icon);
+    function Sanicon() {
+      if (Sanicon === "산") {
+        Sanicon = "산 아이콘 ";
+      }
+    }
+
+    let iconBada = document.getElementById("badaicon");
+    console.log(iconBada);
+    function badaicon() {}
+  </script>
+</html>

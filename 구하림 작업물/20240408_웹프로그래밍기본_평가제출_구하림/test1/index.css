@@ -1,0 +1,247 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  height: 100%;
+}
+/* nav 시작 */
+
+nav {
+  border: 1px solid black;
+}
+
+nav > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+nav > :nth-child(2) > ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* nav 끝 */
+
+/* header 시작 */
+header {
+  background-color: #1d1d1f;
+  width: 1920px;
+  height: 1256px;
+  position: relative;
+}
+header > div:nth-child(1) span {
+  color: white;
+  background-color: rgb(78, 78, 78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div:nth-child(2) {
+  width: 500px;
+  height: 281px;
+  background-color: gainsboro;
+  position: absolute;
+  right: 35%;
+  top: 30%;
+}
+header > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header > div:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+}
+header > div:nth-child(3) button {
+  width: 97.7px;
+  height: 44px;
+  background-color: deepskyblue;
+  color: white;
+  border-radius: 10px;
+}
+header > div:nth-child(3) p {
+  color: white;
+}
+
+/* header 끝 */
+
+/* main 시작 */
+main {
+  width: 1920px;
+  padding: 0;
+  margin: 0;
+}
+main > div:nth-child(1) {
+  background-color: rgb(78, 78, 78);
+  width: 1920px;
+  height: 1256px;
+}
+.video {
+  position: relative;
+}
+.video > div:nth-child(1) {
+  background-color: #1d1d1f;
+  border-radius: 40px;
+  width: 1260px;
+  height: 680px;
+  position: absolute;
+  top: 300px;
+  left: 70px;
+}
+.video > div:nth-child(2) {
+  background-color: #1d1d1f;
+  border-radius: 40px;
+  width: 500px;
+  height: 680px;
+  position: absolute;
+  left: 1600px;
+  top: 300px;
+}
+main > div:nth-child(2) {
+  background-color: black;
+  width: 1920px;
+  height: 1256px;
+}
+main > div:nth-child(2) p {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+main > div:nth-child(2) > div:nth-child(1) {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  width: 1920px;
+  height: 240px;
+}
+main > div:nth-child(2) > div:nth-child(2) {
+  background-color: antiquewhite;
+  padding: 0;
+  margin: 0;
+  width: 1920px;
+  height: 240px;
+}
+main > div:nth-child(2) > div:nth-child(2) p {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.main-iphone-titanium-imge {
+  background-color: rgb(78, 78, 78);
+  width: 1920px;
+  height: 2025px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.main-iphone-titanium-imge div:nth-child(1) {
+  background-color: lightgoldenrodyellow;
+  width: 1050px;
+  height: 430px;
+}
+.main-iphone-titanium-imge div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.main-iphone-titanium-imge div:nth-child(2) > div:nth-child(1) {
+  background-color: lightslategrey;
+  width: 515px;
+  height: 514px;
+}
+.main-iphone-titanium-imge div:nth-child(2) > div:nth-child(2) {
+  background-color: lightsteelblue;
+  width: 515px;
+  height: 514px;
+}
+.main-Apple-GPU {
+  background-color: black;
+  width: 1920px;
+  height: 2025px;
+}
+.main-Apple-GPU > div:nth-child(1) {
+  background-color: darkgrey;
+  border-radius: 20px;
+  width: 229px;
+  height: 56px;
+  display: flex;
+  margin-left: 45%;
+}
+.main-Apple-GPU > div:nth-child(1) p {
+  text-align: center;
+}
+
+.main-Apple-GPU > div:nth-child(1) > div:nth-child(2) {
+  background-color: lightskyblue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.main-Apple-GPU > div:nth-child(2) {
+  background-color: dimgrey;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  margin-left: 46%;
+  margin-top: 5%;
+}
+.main-Apple-GPU > div:nth-child(3) {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 37%;
+  margin-top: 3%;
+  /* text-align: center;  가운데 정렬 인지만  수평  위아래는 정렬이 안됨*/
+}
+.main-Apple-GPU > div:nth-child(3) p {
+  text-align: center;
+}
+
+.main-Apple-GPU > div:nth-child(4) {
+  background-color: antiquewhite;
+  width: 1920px;
+  height: 559px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 30px;
+}
+.main-Apple-GPU > div:nth-child(5) > div:nth-child(1) {
+  color: white;
+  width: 326px;
+  height: 342px;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.main-Apple-GPU > div:nth-child(5) > div:nth-child(2) {
+  color: white;
+  width: 326px;
+  height: 342px;
+  margin-left: 30%;
+}
+/* main 끝 */
+
+/* footer 시작 */
+
+/* footer 끝 */

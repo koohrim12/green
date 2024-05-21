@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개념</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>css는 디자이너에게 넘겨주기</h1>
+      <p>css 는 프로그래밍이 아닌 , 디자인에 가까운 작업이다.</p>
+      <p>
+        개발자는 css 위 코어를 이해 했기 때문에 , css 대신에 직접 스크립트로
+        스타일을 조작 할 수 있다.
+      </p>
+      <p>태그는 객체라는 사실을 잊지 말자</p>
+    </div>
+    <script>
+      var root = window.document.getElementById("root");
+      /// HTML 은 객체(object)덩어리 이므로 ,객체를 조회
+
+      //  문서에서 id를 근거로 식별한 요소를 변수 root에 할당
+      window.console.log(root);
+      //  root 객체의 속성을 출력 (수많은 속성, property 들이 출력됨 )
+      window.console.dir(root);
+      /// 속성중에 children ,HTML에서 수 없이 확인 했던 "자식요소"에 접근
+      window.console.log(root.children);
+
+      //HTML은 객체이면서도 , 묶어서 확인하면 배열처럼 처리
+      for (var i = 0; i < root.children.length; i++) {
+        window.console.log(root.children[i]);
+        // 자식요소들을 순차적으로 출력
+      }
+      for (var i = 0; i < root.children.length; i++) {
+        window.console.log(root.children[i]);
+      }
+      root.style.display = "flex";
+      root.style.flexDirection = "column";
+      root.style.alignItems = "center";
+      root.style.justifyContent = "center";
+      root.style.color = "red";
+      root.style.backgroundColor = "pink";
+
+      // root 요소의 자식 요소들에게만 스타일을 적용할 수 있음
+
+      // console.log(red);
+
+      //  css를 사용하지 않고 , 스크립팅으로 스타일 "명령"
+      root.style.display = "flex";
+      // root 객체의 sttyle 속성에 display 속성을 추가하고 ,flex 값을 할당
+      root.style.flexDirection = "column";
+      //  root 객체의 sttyle 속성에 flexDirection속성을 추가하고 ,colum 값을 할당
+      root.style.alignItems = "center";
+      //  root 객체의 sttyle 속성에 alignItems속성을 추가하고 ,center 값을 할당
+      root.style.justifyContent = "center";
+      //  root 객체의 sttyle 속성에 justifyContent 속성을 추가하고 ,center 값을 할당
+    </script>
+  </body>
+</html>

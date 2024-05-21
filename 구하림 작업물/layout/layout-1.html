@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout-1</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      width: 800px;
+      height: 800px;
+      display: grid;
+      grid-template-columns: 1fr 3fr 2fr;
+    }
+    .L-side {
+      background-color: aqua;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .L-side > div:nth-child(1) {
+      background-color: chocolate;
+      width: 100%;
+      height: 20%;
+    }
+    .L-side > div:nth-child(2) {
+      background-color: blueviolet;
+      width: 100%;
+      height: 20%;
+    }
+
+    .main {
+      background-color: burlywood;
+    }
+    .R-side {
+      background-color: cornflowerblue;
+    }
+    .R-side-top {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: row;
+    }
+    .R-side-top > div:nth-child(1) {
+      background-color: blue;
+      width: 100%;
+      height: 100%;
+    }
+    .R-side-top > div:nth-child(2) {
+      background-color: lightcoral;
+      width: 100%;
+      height: 50%;
+    }
+
+    .R-side-bottom {
+      background-color: chartreuse;
+      width: 100%;
+      height: 20%;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div class="L-side">
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="main">2</div>
+      <div class="R-side">
+        <div class="R-side-top">
+          <div>1</div>
+          <div>2</div>
+        </div>
+        <div class="R-side-bottom">1</div>
+      </div>
+    </div>
+  </body>
+</html>

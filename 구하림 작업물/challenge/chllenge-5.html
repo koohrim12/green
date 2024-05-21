@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    const studentNames = [
+      "구하림",
+      "김보미",
+      "김수현",
+      "김정수",
+      "문혜림",
+      "배성빈",
+      "백지원",
+      "송이현",
+      "신지윤",
+      "유으뜸",
+      "유호영",
+      "이연승",
+      "이재영",
+      "이종수",
+      "임유진",
+      "정호연",
+      "조우식",
+      "조자연",
+      "최유진",
+      "황재민",
+    ];
+    // body 안에있는 id root 를 root 라는 변수에 담아줬다.
+    let root = document.getElementById("root");
+    // body 안에는 ul이 없지만 자바스크립트로 만들어 주기 위해서 ul이라는 변수를 만들고 document.createElement 매소드를 사용하여 ul 요소를 생성하였다.
+    let ul = document.createElement("ul");
+    // ul요소를 생성하고 나서 appendChild 메소드를 사용하여 root 의 자식 (하위)으로 ul을 넣어준다.
+    root.appendChild(ul);
+    // console.log(ul);
+    //   const studentNames 에 있는 배열의 객체가 1개가 아니라 여러개 이기 때문에 for 반북분을 사용하여 동적으로  ul의 자식인 li 반복한다.
+
+    for (let i = 0; i < studentNames.length; i++) {
+      // ul은 요소가 1개이기 때문에  밖에 작성 해도 되지만 li는 여러개 이기 때문에 for문 중괄호 안에 작성하여 li와 함께 반복시키기 위해 안에 작성한다.
+      // ul이라는 요소 안에 넣을 li를 document.createElement메소드로 li요소를 생성해 준다.
+      const li = document.createElement("li");
+      // document.createElement메소드로 생성해준 li를 ul의 자식(하위)으로 li를 만들어 준다.
+      ul.appendChild(li);
+      // li를 textContent 속성을 사용하여 studentNames 안에 던 text를  studentNames[i] 를  li 에 넣어준다.
+      li.textContent = studentNames[i];
+    }
+  </script>
+</html>

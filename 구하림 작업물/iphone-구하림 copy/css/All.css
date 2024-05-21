@@ -1,0 +1,38 @@
+/* background- set */
+:root {
+  --bg-black: black;
+  --color-black: black;
+  --bg-button-black: black;
+  --bg-gray: #4d4d4d;
+  --bg-nav: #e6e6e6;
+  --bg-white: white;
+  --bg-button-blue: cornflowerblue;
+  --color-black: black;
+  --color-white: white;
+  --imge: pink;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body > div {
+  background-color: var(--bg-black);
+}
+body > div > div {
+  width: 100vw;
+  height: 100vh;
+}
+span {
+  color: var(--bg-button-blue);
+}
+header {
+  width: 100vw;
+  height: 100vh;
+}
+#set-1 {
+  width: 100vw;
+  height: 100vh;
+}
+.color-black {
+  color: var(--color-black);
+}

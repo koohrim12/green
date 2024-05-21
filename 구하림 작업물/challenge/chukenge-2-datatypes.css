@@ -1,0 +1,114 @@
+:root {
+  --bg-lemonchiffon: lemonchiffon;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(https://img.freepik.com/premium-vector/undefined_515038-17783.jpg?w=740);
+  margin: 0;
+  padding: 0;
+  height: 1100px;
+  padding: 10%;
+}
+
+#contianer > h1 {
+  grid-area: a;
+  font-family: "Cafe24ClassicType-Regular";
+  text-align: center;
+  font-size: 60px;
+}
+#contianer > h2 {
+  grid-area: b;
+  font-family: "Cafe24ClassicType-Regular";
+  text-align: center;
+  margin: 20px;
+}
+
+@font-face {
+  font-family: "Cafe24ClassicType-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.main-bg-lemon {
+  /* background-color: lemonchiffon; */
+  gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    " a b e g "
+    " a c f g "
+    " a D f g ";
+}
+.main-bg-lemon > div:nth-child(1) {
+  background-color: lemonchiffon;
+  grid-area: a;
+  border: 1px solid;
+  padding: 10px;
+}
+.main-bg-lemon > div:nth-child(2) {
+  background-color: lemonchiffon;
+  grid-area: b;
+  border: 1px solid;
+  padding: 10px;
+}
+.main-bg-lemon > div:nth-child(3) {
+  background-color: lemonchiffon;
+  grid-area: e;
+  border: 1px solid;
+  padding: 10px;
+}
+.main-bg-lemon > div:nth-child(4) {
+  background-color: lemonchiffon;
+  grid-area: g;
+  border: 1px solid;
+  padding: 10px;
+}
+.main-bg-lemon > div:nth-child(5) {
+  background-color: lemonchiffon;
+  grid-area: c;
+  border: 1px solid;
+  padding: 10px;
+}
+.main-bg-lemon > div:nth-child(6) {
+  background-color: lemonchiffon;
+  grid-area: f;
+  border: 1px solid;
+  padding: 10px;
+}
+.main-bg-lemon > div:nth-child(7) {
+  background-color: lemonchiffon;
+  grid-area: D;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.function-imge > img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.function-imge > img:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 60px;
+}
+
+.object-imge {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.object-imge > img {
+  width: 100px;
+  height: 100px;
+}
+.main-bg-lemon > :nth-child(4) > ul {
+  list-style: none;
+  border: 1px solid lightseagreen;
+}

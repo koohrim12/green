@@ -1,0 +1,86 @@
+/* background- set */
+:root {
+  --bg-black: black;
+  --color-black: black;
+  --bg-button-black: black;
+  --bg-gray: #4d4d4d;
+  --bg-nav: #e6e6e6;
+  --bg-white: white;
+  --bg-button-blue: cornflowerblue;
+  --color-black: black;
+  --color-white: white;
+  --imge: pink;
+}
+#set-1 {
+  background-color: var(--bg-gray);
+  gap: 10%;
+  width: 100vw;
+  height: 200vh;
+}
+
+.set-1_color-white {
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 일단 핵심부터 동영상 보기 */
+#set-1 > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 700px;
+  margin-left: 20%;
+}
+#set-1 > div:first-child > p {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/*  A17 Pro 등장.게임의 판도를 바꾸는 칩.획기적인 성능. */
+.set-1_imge {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10%;
+  margin-left: 60%;
+}
+.set-1_imge > div:nth-child(1) {
+  background-color: var(--imge);
+  border-radius: 30px;
+  width: 900px;
+  height: 400px;
+  padding: 30px;
+}
+.set-1_imge > div:nth-child(2) {
+  background-color: var(--imge);
+  border-radius: 30px;
+  width: 800px;
+  height: 400px;
+  padding: 30px;
+}
+
+/*  iPhone-15-Pro1-color */
+/* 자세히 들여다 보기  */
+#set-1 div:nth-child(3) {
+  background-color: var(--bg-black);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#set-1 div:nth-child(3) p {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-right: 20%;
+}
+#set-1 div:nth-child(3) > div {
+  background-color: var(--imge);
+  width: 900px;
+  height: 400px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    // root에
+    let = document.getElementById("root");
+    // console.log(root);
+    let div = document.createElement("div");
+    root.appendChild(div);
+    let button = document.createElement("button");
+    div.appendChild(button);
+    // btn 이라는 id를 자바스크립트로 주기
+    button.setAttribute("id", "btn");
+    // console.log(button);
+    let img = document.createElement("img");
+    img.src = "강아지_1-removebg-preview (1).png";
+
+    button.appendChild(img);
+
+    // root의 자식 div 반복문으로  만들기
+    for (i = 0; i < 1; i++) {
+      let div = document.createElement("div");
+      root.appendChild(div);
+      let img = document.createElement("img");
+      img.src = "강아지_1-removebg-preview (1).png";
+      root.children[1].appendChild(img);
+    }
+
+    function dogImg() {
+      let img = document.createElement("img");
+      img.src = "강아지_1-removebg-preview (1).png";
+      root.children[1].appendChild(img);
+      console.log(dogImg);
+    }
+    button.addEventListener("click", dogImg);
+
+    // none 방식 실패
+    // const dog = root.children[1];
+    // dog.style.display = "none"
+    // if (dog.style.display != "none") {
+    //     dog.style.display = "none";
+    //   } else {
+    //     dog.style.display = "";
+    //   }
+  </script>
+</html>

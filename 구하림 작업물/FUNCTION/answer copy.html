@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>구하림이 둘 중에 고를 것 같은 걸 고르시오.</h1>
+      <button onclick="San()">산</button>
+      <button>바다</button>
+    </div>
+  </body>
+  <script>
+    function San() {
+      let root = document.getElementById("root");
+      console.log(root.children[1]);
+      console.dir(root.children[1]);
+      root.children[1].innerHTML = "산 이미지 ";
+    }
+  </script>
+</html>
