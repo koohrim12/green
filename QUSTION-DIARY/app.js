@@ -21,7 +21,7 @@ const server = http.createServer(function (requst, response) {
     if (requst.url === "/index.js") {
       const img = fs.readFileSync("./public/logo.png");
       response.statuCode = 200;
-      response.setHeader("content-Type", "img/javascript; charset=utf-8");
+      response.setHeader("content-Type", "image/javascript; charset=utf-8");
       response.write(img);
       response.end();
     }
